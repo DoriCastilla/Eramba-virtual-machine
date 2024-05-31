@@ -1,7 +1,0 @@
-<html>
-<body>
-<button id="boton" onclick="copiar()" value="otra pueba">Copiar texto</button>
-<input type="text" id="target2">
-<br>
-</body>
-</html>
