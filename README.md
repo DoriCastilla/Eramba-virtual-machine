@@ -6,8 +6,8 @@ Versions in this training are: <br>
 - Ubuntu 22.04<br>
 - VirtualBox 6.1<br>
 - Vagrant 2.2.19
-</p>
 
-Sources:
-https://medium.com/@kadimasam/set-up-virtualbox-and-vagrant-on-ubuntu-22-04-9ac6b9ace94c
-https://devopscube.com/vagrant-tutorial-beginners/
+
+Sources:<br>
+https://medium.com/@kadimasam/set-up-virtualbox-and-vagrant-on-ubuntu-22-04-9ac6b9ace94c<br>
+https://devopscube.com/vagrant-tutorial-beginners/<br>
