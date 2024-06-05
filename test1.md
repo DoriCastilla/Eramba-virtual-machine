@@ -4,11 +4,13 @@
 <label>Texto copiado (Ctrl + V)</label>
 <input type="text" id="target2">
 <br>
+
 * {
   margin:5px;
   padding:5px;
   border-radius:5px;
 }
+
 function copiar(){
   var origen = document.getElementById('target1');
   var destino = document.getElementById('target2');
