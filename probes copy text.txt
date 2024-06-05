@@ -1,0 +1,10 @@
+<html>
+<body>
+ <button id="boton" onclick="copiar()" value="otra pueba">Copiar texto</button>
+<input type="text" value="Lorem ipsum dolor site amet" id="target1" readonly>
+<br>
+<label>Texto copiado (Ctrl + V)</label>
+<input type="text" id="target2">
+<br>
+</body>
+</html>
