@@ -1,7 +1,9 @@
 <head><h1><strong>Building VMs with VirtualBox and Vagrant on Ubuntu 22_04 </strong></h1></head>
 <body>
 <p>Update and upgrade the package index in terminal:</p> 
-<p style="background-color:#d6d6d6">sudo apt update</p>
+```
+sudo apt update
+```
 <p>Import VB package repositories keys:</p>
 <p>~$</p><p style="color:blue">Sudo apt install curl -y</p>
 <p>~$</p><p style="color:blue">curl https://www.virtualbox.org/download/oracle_vbox_2016.asc | gpg --dearmor > oracle_vbox_2016.gpg</p>
