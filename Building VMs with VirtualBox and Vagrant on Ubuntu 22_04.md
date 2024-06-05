@@ -1,4 +1,4 @@
 <head><h1><strong>Building VMs with VirtualBox and Vagrant on Ubuntu 22_04 </strong></h1></head>
 <body>
 <p>Update and upgrade the package index in terminal</p>
-<div style="width: 300px; background-color:azure">Ancho fijo. Definido con width: 300px </div>
+<div style="width: 300px; background-color:grey">Ancho fijo. </div>
