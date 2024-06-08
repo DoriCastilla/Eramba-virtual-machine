@@ -1,4 +1,4 @@
-## Establish and config Eramba virtual machine with static IP in VMware Workstation using Putty.
+## Establish and config an Eramba VM with static IP in VMware Workstation using Putty.
 
 ### Programs and files.
 Running and functioning:
