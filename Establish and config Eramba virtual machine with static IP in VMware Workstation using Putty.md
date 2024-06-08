@@ -21,12 +21,12 @@ Import the Eramba OVA.
 - Specify there the new guest shall be stored
 - Select *Import*
 
-Power on this virtual machine when it is done.
+Power on this virtual machine when it is done.<br>
 ![eramba vm especifications](https://github.com/DoriCastilla/Eramba-virtual-machine/assets/170856411/dcb795f9-f5ea-42f3-be26-be1555ba8e82)
 
 Login to VMguest eramba-test-01 by the console and after a litle while it will ask you for login.
-- Login username: eramba
-- Login password: eramba 
+Login username: eramba
+Login password: eramba 
 <sub>Hint about Workstation, you can get “locked” in to the console to get out, press: Alt+Ctrl</sub>
 
 Successful login will show you few important things:
@@ -35,9 +35,9 @@ Successful login will show you few important things:
 
 In this case the IP address is: 192.168.140.129  but yours might very well be different, and change from time to time, because stil lit is a dinamyc IP.  
 Make a note of: 
-- IP address: in this case 192.168.140.129 ![eramba_console_presentation](https://github.com/DoriCastilla/Eramba-virtual-machine/assets/170856411/9d946e5b-c300-43d1-bb12-4962a6ebde3c)
-- Name of interface: in this case ens33
-
+- IP address: in this case 192.168.140.129
+- Name of interface: in this case ens33<br>
+ ![eramba_console_presentation](https://github.com/DoriCastilla/Eramba-virtual-machine/assets/170856411/9d946e5b-c300-43d1-bb12-4962a6ebde3c)
 
 Verify that your new Eramba vmguest got Internet connectivity writting in the console: 
 ```
@@ -51,19 +51,18 @@ Start PuTTY, and:
 - enter the IP address 
 - enter vmguest name
 - press *Save*
-- press *Open*
+- press *Open*<br>
 ![starting_putty](https://github.com/DoriCastilla/Eramba-virtual-machine/assets/170856411/50df4e01-a969-43cf-8ee7-1f5732cd2052)
 
-Login trough putty to the eramba vmguest:
-- Login username: eramba
-- Login password: eramba 
+Login trough putty to the eramba vmguest, remember:
+Login username: eramba
+Login password: eramba 
 
 ### Editing Network Configuration.
 In putty session: 
 ```
 sudo nano /etc/netplan/50-cloud-init.yaml
 ```
-and password.  
 
 Delete the rows in bright green and pink or disable it adding # at line start and write down:
 ```
@@ -80,8 +79,8 @@ network:
 ```
 Where **ens33** can be different in your case.
 Where IP  address might be different and here you must to change the 4rt octet for a random number above 1 and below 255.
-Where gateway4 is always the 1st, 2on, and 3rt octets of your IP and the 4th. always a 2, at least you hak it.
-To exit: **Ctrl+X** 
+Where gateway4 is always the 1st, 2on, and 3rt octets of your IP and the 4th. always a 2, at least you hak it.<br>
+To exit: **Ctrl+X** <br>
 Save modified buffer? **Y**
 ```
 sudo netplan apply
@@ -106,7 +105,7 @@ And watch the magic!.
 Create the URL with your IP plus the port, in my case: *http://192.168.140.156:8443*
 Open your Web browser and write down your eramba url.
 
-###Fixing Local host issues.
+### Fixing Local host issues.
 
 Back to Putty, if you are not in the directory home/docker, go there again: 
 ```
@@ -119,8 +118,8 @@ sudo docker compose -f docker-compose.simple-install.yml down
 ```
 sudo docker compose -f docker-compose.simple-install.yml down 
 ```
-Look for the row **PUBLIC_ADRESS=https://192.168.140.156:8443
-To exit: **Ctrl+X** 
+Look for the row **PUBLIC_ADRESS=https://192.168.140.156:8443<br>
+To exit: **Ctrl+X** <br>
 Save modified buffer? **Y**
 
 Then update your eramba server:
