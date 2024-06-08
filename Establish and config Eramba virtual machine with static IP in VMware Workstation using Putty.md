@@ -102,7 +102,7 @@ And watch the magic!.
 
 ### Opening Eramba.
 
-Create the URL with your IP plus the port, in my case: *http://192.168.140.156:8443*
+Create the URL with your IP plus the port, in my case: *http://192.168.140.156:8443*<br>
 Open your Web browser and write down your eramba url.
 
 ### Fixing Local host issues.
