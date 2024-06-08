@@ -1,6 +1,6 @@
 ## Establish and config an Eramba VM with static IP in VMware Workstation using Putty.
 
-### Programs and files.
+### Programs and files used:
 Running and functioning:
 - VMware Workstation 15 Pro
 - Putty
@@ -11,7 +11,7 @@ Download Eramba OVF to your local computer, you need to fetch 3 files:
 3.	[https://downloadseramba.s3.eu-west-1.amazonaws.com/CommunityVM/3181/eramba.mf](https://downloadseramba.s3.eu-west-1.amazonaws.com/CommunityVM/3181/eramba.mf)
 
 
-### Installing Eramba 
+### Installing Eramba: 
 Start VMware workstation, 
 - In the menu: File/Open 
 - navigate to where you placed the downloaded Eramba files and select *eramba*, and press *Open*
@@ -45,7 +45,7 @@ ping 8.8.8.8
 ```
 <sub>Ctrol+C to stop it.</sub>
 
-### Set a Static IP address in your eramba VMguest using Putty
+### Set a Static IP address in your eramba VMguest using Putty:
 
 Start PuTTY, and:
 - enter the IP address 
@@ -58,7 +58,7 @@ Login trough putty to the eramba vmguest, remember:
 Login username: eramba
 Login password: eramba 
 
-### Editing Network Configuration.
+### Editing Network Configuration:
 In putty session: 
 ```
 sudo nano /etc/netplan/50-cloud-init.yaml
@@ -89,7 +89,7 @@ sudo netplan apply
 Here you will lost connection in Putty with your eramba VMguest because its IP is changed. 
 Close the Putty session and start it again updating the new IP you set.
 
-### Building the Eramba Server.
+### Building the Eramba Server:
 
 In Putty you get into the session with the updated IP, so, you are again in your VMguest: 
 ```
@@ -100,12 +100,12 @@ sudo docker compose -f docker-compose.simple-install.yml up -d
 ```
 And watch the magic!.
 
-### Opening Eramba.
+### Opening Eramba:
 
 Create the URL with your IP plus the port, in my case: *http://192.168.140.156:8443*<br>
 Open your Web browser and write down your eramba url.
 
-### Fixing Local host issues.
+### Fixing Local host issues:
 
 Back to Putty, if you are not in the directory home/docker, go there again: 
 ```
@@ -127,7 +127,7 @@ Then update your eramba server:
 sudo docker compose -f docker-compose.simple-install.yml up
 ```
 
-### Login in Eramba
+### Login in Eramba:
 
 Back to the Web Broser where you get the acces to Eramba interface you can log in with: 
 username: admin 
