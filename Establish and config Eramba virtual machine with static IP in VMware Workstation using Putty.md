@@ -1,6 +1,6 @@
-##Establish and config Eramba virtual machine with static IP in VMware Workstation using Putty.
+## Establish and config Eramba virtual machine with static IP in VMware Workstation using Putty.
 
-###Programs and files.
+### Programs and files.
 Running and functioning:
 - VMware Workstation 15 Pro
 - Putty
@@ -11,7 +11,7 @@ Download Eramba OVF to your local computer, you need to fetch 3 files:
 3.	[https://downloadseramba.s3.eu-west-1.amazonaws.com/CommunityVM/3181/eramba.mf](https://downloadseramba.s3.eu-west-1.amazonaws.com/CommunityVM/3181/eramba.mf)
 
 
-###Installing Eramba 
+### Installing Eramba 
 Start VMware workstation, 
 - In the menu: File/Open 
 - navigate to where you placed the downloaded Eramba files and select *eramba*, and press *Open*
@@ -35,9 +35,9 @@ Successful login will show you few important things:
 
 In this case the IP address is: 192.168.140.129  but yours might very well be different, and change from time to time, because stil lit is a dinamyc IP.  
 Make a note of: 
-- IP address: in this case 192.168.140.129
+- IP address: in this case 192.168.140.129 ![eramba_console_presentation](https://github.com/DoriCastilla/Eramba-virtual-machine/assets/170856411/9d946e5b-c300-43d1-bb12-4962a6ebde3c)
 - Name of interface: in this case ens33
-![eramba_console_presentation](https://github.com/DoriCastilla/Eramba-virtual-machine/assets/170856411/9d946e5b-c300-43d1-bb12-4962a6ebde3c)
+
 
 Verify that your new Eramba vmguest got Internet connectivity writting in the console: 
 ```
@@ -45,7 +45,7 @@ ping 8.8.8.8
 ```
 <sub>Ctrol+C to stop it.</sub>
 
-###Set a Static IP address in your eramba VMguest using Putty
+### Set a Static IP address in your eramba VMguest using Putty
 
 Start PuTTY, and:
 - enter the IP address 
@@ -58,7 +58,7 @@ Login trough putty to the eramba vmguest:
 - Login username: eramba
 - Login password: eramba 
 
-###Editing Network Configuration.
+### Editing Network Configuration.
 In putty session: 
 ```
 sudo nano /etc/netplan/50-cloud-init.yaml
@@ -83,8 +83,6 @@ Where IP  address might be different and here you must to change the 4rt octet f
 Where gateway4 is always the 1st, 2on, and 3rt octets of your IP and the 4th. always a 2, at least you hak it.
 To exit: **Ctrl+X** 
 Save modified buffer? **Y**
-
-
 ```
 sudo netplan apply
 ```
@@ -92,7 +90,7 @@ sudo netplan apply
 Here you will lost connection in Putty with your eramba VMguest because its IP is changed. 
 Close the Putty session and start it again updating the new IP you set.
 
-###Building the Eramba Server.
+### Building the Eramba Server.
 
 In Putty you get into the session with the updated IP, so, you are again in your VMguest: 
 ```
@@ -103,7 +101,7 @@ sudo docker compose -f docker-compose.simple-install.yml up -d
 ```
 And watch the magic!.
 
-###Opening Eramba.
+### Opening Eramba.
 
 Create the URL with your IP plus the port, in my case: *http://192.168.140.156:8443*
 Open your Web browser and write down your eramba url.
