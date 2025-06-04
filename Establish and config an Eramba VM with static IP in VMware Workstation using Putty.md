@@ -18,16 +18,16 @@ Start VMware workstation,
 
 Import the Eramba OVA.
 - Give the vmguest a name. Here I did name it: “eramba-test-01”
-- Specify there the new guest shall be stored
+- Specify the new guest, it shall be stored
 - Select *Import*
 
 Power on this virtual machine when it is done.<br>
-![eramba vm especifications](https://github.com/DoriCastilla/Eramba-virtual-machine/assets/170856411/dcb795f9-f5ea-42f3-be26-be1555ba8e82)
+![eramba vm specifications](https://github.com/DoriCastilla/Eramba-virtual-machine/assets/170856411/dcb795f9-f5ea-42f3-be26-be1555ba8e82)
 
-Login to VMguest eramba-test-01 by the console and after a litle while it will ask you for login.
-Login username: eramba
-Login password: eramba 
-<sub>Hint about Workstation, you can get “locked” in to the console to get out, press: Alt+Ctrl</sub>
+Log in to VMguest eramba-test-01 by the console, and after a while it will ask you for login.<br>
+Login username: eramba<br>
+Login password: eramba<br> 
+<sub>(Hint about Workstation, you can get “locked” into the console to get out, press: Alt+Ctrl)</sub>
 
 Successful login will show you few important things:
 - Your eramba instance IP address: 192.168.140.129
@@ -71,11 +71,11 @@ network:
   renderer: networkd
   ethernets:
     ens33:
-     dhcp4: no
-     addresses: [192.168.140.156/24]
-     gateway4: 192.168.140.2
-     nameservers:
-       addresses: [8.8.8.8,8.8.4.4]
+      dhcp4: no
+      addresses: [192.168.140.156/24]
+      gateway4: 192.168.140.2
+      nameservers:
+        addresses: [8.8.8.8,8.8.4.4]
 ```
 Where **ens33** can be different in your case.
 Where IP  address might be different and here you must to change the 4rt octet for a random number above 1 and below 255.
