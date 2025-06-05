@@ -115,9 +115,6 @@ Turn off the eramba server:
 ```
 sudo docker compose -f docker-compose.simple-install.yml down 
 ```
-```
-sudo docker compose -f docker-compose.simple-install.yml down 
-```
 Look for the row **PUBLIC_ADRESS=https://192.168.140.156:8443<br>
 To exit: **Ctrl+X** <br>
 Save modified buffer? **Y**
